@@ -9,6 +9,8 @@ set splitright
 set expandtab			" Insert spaces when tab is pressed
 set tabstop=2			" and use 4 spaces
 set shiftwidth=2		" also for < and >
+set scrolloff=4
+set sidescrolloff=5
 
 
 call plug#begin()
@@ -27,6 +29,7 @@ let g:deoplete#enable_at_startup = 1
   Plug 'carlitux/deoplete-ternjs'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'rest-nvim/rest.nvim'
+  Plug 'ActivityWatch/aw-watcher-vim'
 call plug#end()
 
 call deoplete#custom#option('num_processes', 4)
@@ -41,10 +44,13 @@ let g:tern#arguments = [" — persistent"]
 
 nnoremap <SPACE> <Nop>
 let mapleader=" "
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-"nnoremap <C-f> :NERDTreeFind<CR>
+map <M-S-j> <Nop>
+map <M-S-k> <Nop>
+"nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
+"nnoremap <C-n> :NERDTree<CR>
+"nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 nnoremap <leader>x :vsplit +term<CR>
 tnoremap <Esc> <C-\><C-n>
@@ -54,6 +60,12 @@ vmap <leader>; <plug>NERDCommenterToggle
 vnoremap <leader>r "hy:%s/<C-r>h//gc<left><left><left>
 vnoremap <leader>s <Esc>`.``gvP``P
 nnoremap <leader>t <Plug>RestNvim
+
+" Edit vimr configuration file
+nnoremap <Leader>ce :e $MYVIMRC<CR>
+" " Reload vimr configuration file
+nnoremap <Leader>cr :source $MYVIMRC<CR>
+
  "Example config in VimScript
  "NOTE: Configuration needs to be set BEFORE loading the color scheme with `colorscheme` command
 "let g:github_function_style = "italic"
