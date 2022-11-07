@@ -5,6 +5,8 @@ alias ipy="ipython"
 alias tm="tmux"
 alias mysync="rsync -ah --partial --info=progress2"
 alias l="ls -a"
+alias j="fasd_cd -d"
+alias jj="fasd_cd -d -i"
 
 function cl() {
     cd "$@" && l
