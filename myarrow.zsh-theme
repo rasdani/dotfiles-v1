@@ -1,13 +1,18 @@
 NCOLOR="cyan"
 RCOLOR="magenta"
 
-PROMPT='%{$fg[$NCOLOR]%}%c ➤ %{$reset_color%}'
-RPROMPT='%{$fg[$RCOLOR]%} $(git_prompt_info)%{$reset_color%}'
+function git_root() {
+  basename $(git rev-parse --show-toplevel 2> /dev/null) 2> /dev/null
+  }
 
-ZSH_THEME_GIT_PROMPT_PREFIX="git:"
+PROMPT='%{$fg[$NCOLOR]%}%2d ➤ %{$reset_color%}'
+RPROMPT='%{$fg[$RCOLOR]%} $(git_root)$(git_prompt_info)%{$reset_color%}'
+
+ZSH_THEME_GIT_PROMPT_PREFIX=":"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_DIRTY="*"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
+
 
 # See https://geoff.greer.fm/lscolors/
 export LSCOLORS="exfxcxdxbxbxbxbxbxbxbx"

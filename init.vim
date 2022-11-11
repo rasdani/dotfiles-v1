@@ -15,10 +15,12 @@ set sidescrolloff=5
 
 call plug#begin()
 "	Plug 'bfredl/nvim-ipy'
-  Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-  Plug 'projekt0n/github-nvim-theme'
-  Plug 'EdenEast/nightfox.nvim'
+  Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
+  Plug 'tomasr/molokai'
+  "Plug 'sickill/vim-monokai'
 	Plug 'preservim/nerdtree'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
   "Plug 'zchee/deoplete-jedi'
@@ -30,7 +32,7 @@ let g:deoplete#enable_at_startup = 1
   Plug 'nvim-lua/plenary.nvim'
   Plug 'rest-nvim/rest.nvim'
   "disable on remote server
-  "Plug 'ActivityWatch/aw-watcher-vim'
+  Plug 'ActivityWatch/aw-watcher-vim'
 call plug#end()
 
 call deoplete#custom#option('num_processes', 4)
@@ -84,24 +86,6 @@ vnoremap <Leader>w :w<CR>
 vnoremap <Leader>1 :q!<CR>
 vnoremap <Leader>z :wq<CR>
 
- "Example config in VimScript
- "NOTE: Configuration needs to be set BEFORE loading the color scheme with `colorscheme` command
-"let g:github_function_style = "italic"
-"let g:github_sidebars = ["qf", "vista_kind", "terminal", "packer"]
-
- "Change the "hint" color to the "orange" color, and make the "error" color bright red
-"let g:github_colors = {
-  "\ 'hint': 'orange',
-  "\ 'error': '#ff0000'
-"\ }
-
-" Load the colorscheme
-" VimScript
-"let g:github_comment_style = "NONE"
-"let g:github_keyword_style = "NONE"
-"let g:github_function_style = "NONE"
-"let g:github_variable_style = "NONE"
-"colorscheme github_dark
-"colorscheme nightfox
-"colorscheme tokyonight
+colorscheme molokai
+"colorscheme monokai
 highlight Pmenu ctermbg=gray guibg=gray
