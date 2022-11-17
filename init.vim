@@ -32,7 +32,7 @@ let g:deoplete#enable_at_startup = 1
   Plug 'nvim-lua/plenary.nvim'
   Plug 'rest-nvim/rest.nvim'
   "disable on remote server
-  Plug 'ActivityWatch/aw-watcher-vim'
+  "Plug 'ActivityWatch/aw-watcher-vim'
 call plug#end()
 
 call deoplete#custom#option('num_processes', 4)
@@ -79,12 +79,33 @@ nnoremap <Leader>is :source $MYVIMRC<CR>
 "Write, quit and force quit
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>1 :q!<CR>
+"nnoremap <Leader>1 :q!<CR>
 nnoremap <Leader>z :wq<CR>
 vnoremap <Leader>q :q<CR>
 vnoremap <Leader>w :w<CR>
-vnoremap <Leader>1 :q!<CR>
+"vnoremap <Leader>1 :q!<CR>
 vnoremap <Leader>z :wq<CR>
+
+"Shortcuts for tabs
+nnoremap <Leader>1 1gt
+vnoremap <Leader>1 1gt
+nnoremap <Leader>2 2gt
+vnoremap <Leader>2 2gt
+nnoremap <Leader>3 3gt
+vnoremap <Leader>3 3gt
+nnoremap <Leader>4 4gt
+vnoremap <Leader>4 4gt
+nnoremap <Leader>5 5gt
+vnoremap <Leader>5 5gt
+nnoremap <Leader>6 6gt
+vnoremap <Leader>6 6gt
+nnoremap <Leader>7 7gt
+vnoremap <Leader>7 7gt
+nnoremap <Leader>8 8gt
+vnoremap <Leader>8 8gt
+nnoremap <Leader>9 9gt
+vnoremap <Leader>9 9gt
+
 
 colorscheme molokai
 "colorscheme monokai
