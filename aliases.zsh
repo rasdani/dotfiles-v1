@@ -4,6 +4,7 @@ alias gr='cd $(git rev-parse --show-toplevel)'
 alias ipy="ipython"
 alias tm="tmux"
 alias mysync="rsync -ah --partial --info=progress2"
+alias duh= "du -h --max-depth=1"
 alias l="ls -a"
 alias j="fasd_cd -d"
 alias jj="fasd_cd -d -i"
