@@ -69,7 +69,7 @@ autocmd TermOpen * startinsert
 nmap <leader>; <plug>NERDCommenterToggle
 vmap <leader>; <plug>NERDCommenterToggle
 vnoremap <leader>r "hy:%s/<C-r>h//gc<left><left><left>
-vnoremap <leader>s <Esc>`.``gvP``P
+"vnoremap <leader>s <Esc>`.``gvP``P
 nnoremap <leader>t <Plug>RestNvim
 
 "Edit and source init.vim
@@ -78,11 +78,13 @@ nnoremap <Leader>is :source $MYVIMRC<CR>
 
 "Write, quit and force quit
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>w :w<CR>
+"nnoremap <Leader>w :w<CR>
+nnoremap <Leader>s :w<CR>
 "nnoremap <Leader>1 :q!<CR>
 nnoremap <Leader>z :wq<CR>
 vnoremap <Leader>q :q<CR>
-vnoremap <Leader>w :w<CR>
+"vnoremap <Leader>w :w<CR>
+vnoremap <Leader>s :w<CR>
 "vnoremap <Leader>1 :q!<CR>
 vnoremap <Leader>z :wq<CR>
 
