@@ -78,6 +78,7 @@ nnoremap <Leader>is :source $MYVIMRC<CR>
 
 "Write, quit and force quit
 nnoremap <Leader>q :q<CR>
+<<<<<<< HEAD
 nnoremap <Leader>w :w<CR>
 "nnoremap <Leader>s :s<CR>
 "nnoremap <Leader>1 :q!<CR>
@@ -85,6 +86,15 @@ nnoremap <Leader>z :wq<CR>
 vnoremap <Leader>q :q<CR>
 vnoremap <Leader>w :w<CR>
 "vnoremap <Leader>s :s<CR>
+=======
+"nnoremap <Leader>w :w<CR>
+nnoremap <Leader>s :w<CR>
+"nnoremap <Leader>1 :q!<CR>
+nnoremap <Leader>z :wq<CR>
+vnoremap <Leader>q :q<CR>
+"vnoremap <Leader>w :w<CR>
+vnoremap <Leader>s :w<CR>
+>>>>>>> refs/remotes/origin/main
 "vnoremap <Leader>1 :q!<CR>
 vnoremap <Leader>z :wq<CR>
 
