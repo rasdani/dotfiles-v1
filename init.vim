@@ -32,7 +32,7 @@ let g:deoplete#enable_at_startup = 1
   Plug 'nvim-lua/plenary.nvim'
   Plug 'rest-nvim/rest.nvim'
   "disable on remote server
-  "Plug 'ActivityWatch/aw-watcher-vim'
+  Plug 'ActivityWatch/aw-watcher-vim'
 call plug#end()
 
 call deoplete#custom#option('num_processes', 4)
@@ -69,7 +69,7 @@ autocmd TermOpen * startinsert
 nmap <leader>; <plug>NERDCommenterToggle
 vmap <leader>; <plug>NERDCommenterToggle
 vnoremap <leader>r "hy:%s/<C-r>h//gc<left><left><left>
-vnoremap <leader>s <Esc>`.``gvP``P
+"vnoremap <leader>s <Esc>`.``gvP``P
 nnoremap <leader>t <Plug>RestNvim
 
 "Edit and source init.vim
@@ -79,10 +79,12 @@ nnoremap <Leader>is :source $MYVIMRC<CR>
 "Write, quit and force quit
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>
+"nnoremap <Leader>s :s<CR>
 "nnoremap <Leader>1 :q!<CR>
 nnoremap <Leader>z :wq<CR>
 vnoremap <Leader>q :q<CR>
 vnoremap <Leader>w :w<CR>
+"vnoremap <Leader>s :s<CR>
 "vnoremap <Leader>1 :q!<CR>
 vnoremap <Leader>z :wq<CR>
 
