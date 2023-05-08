@@ -71,9 +71,11 @@ ZSH_THEME="myarrow"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+zstyle ':omz:plugins:nvm' lazy yes
 plugins=(
   git
   zsh-autosuggestions
+  nvm
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -120,10 +122,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 ### MY CONFIG: ###
-export PATH=$HOME/bin:$PATH
+export PATH=/usr/local/go/bin:$HOME/bin:$PATH
+export HIST_IGNORE_SPACE=true
 eval "$(fasd --init auto)"
 export EDITOR=$(which nvim)
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
